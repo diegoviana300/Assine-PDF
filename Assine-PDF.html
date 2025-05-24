@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assine PDF - Assine Documentos com Praticidade e Segurança</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1E293B; /* slate-800 */
+            color: #CBD5E1; /* slate-300 */
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); /* slate-900 to slate-800 */
+        }
+        .section-title {
+            font-size: 2.5rem; /* 40px */
+            font-weight: 800;
+            margin-bottom: 2rem; /* 32px */
+            color: #38BDF8; /* sky-400 */
+            letter-spacing: -0.025em;
+        }
+        .subsection-title {
+            font-size: 1.75rem; /* 28px */
+            font-weight: 700;
+            margin-bottom: 1.25rem; /* 20px */
+            color: #7DD3FC; /* sky-300 */
+        }
+        .feature-list li {
+            display: flex;
+            align-items: start;
+            margin-bottom: 0.875rem; /* 14px */
+            line-height: 1.7;
+            color: #E2E8F0; /* slate-200 */
+        }
+        .feature-list svg {
+            flex-shrink: 0;
+            margin-right: 0.875rem; /* 14px */
+            color: #22D3EE; /* cyan-400 */
+            width: 1.5rem; /* 24px */
+            height: 1.5rem; /* 24px */
+            margin-top: 0.25rem;
+        }
+        .card {
+            background-color: #334155; /* slate-700 */
+            border-radius: 0.75rem; /* 12px */
+            padding: 2rem; /* 32px */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #475569; /* slate-600 */
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+        }
+        .cta-button {
+            background-color: #0EA5E9; /* sky-500 */
+            color: white;
+            padding: 0.875rem 2rem; /* 14px 32px */
+            border-radius: 0.5rem; /* 8px */
+            font-weight: 700;
+            text-align: center;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(14, 165, 233, 0.2);
+        }
+        .cta-button:hover {
+            background-color: #0284C7; /* sky-600 */
+            transform: translateY(-2px);
+        }
+        .pro-badge {
+            background-color: #F59E0B; /* amber-500 */
+            color: #78350F; /* amber-900 */
+            padding: 0.375rem 1rem; /* 6px 16px */
+            border-radius: 9999px; /* pill shape */
+            font-size: 0.875rem; /* 14px */
+            font-weight: 600;
+            display: inline-block;
+        }
+        .table-header {
+            background-color: #334155; /* slate-700 */
+            color: #7DD3FC; /* sky-300 */
+            border-bottom: 2px solid #475569; /* slate-600 */
+        }
+        .table-row-dark {
+            background-color: #334155; /* slate-700 */
+        }
+        .table-row-light {
+            background-color: #475569; /* slate-600 */
+        }
+        .table-row-dark:hover, .table-row-light:hover {
+            background-color: #525E71; /* Um pouco mais claro para hover */
+        }
+        .checkmark { color: #22D3EE; /* cyan-400 */ font-weight: bold; }
+        .crossmark { color: #F472B6; /* pink-400 */ font-weight: bold; }
+        .watermark-info {
+            font-size: 0.875rem;
+            color: #94A3B8; /* slate-400 */
+        }
+        .icon-diferencial {
+            width: 3rem; /* 48px */
+            height: 3rem; /* 48px */
+            margin-bottom: 1rem; /* 16px */
+            color: #38BDF8; /* sky-400 */
+        }
+        .footer-bg {
+            background-color: #0F172A; /* slate-900 */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="hero-bg py-20 sm:py-28">
+        <div class="container mx-auto px-6 text-center">
+            <img src="https://placehold.co/120x120/0EA5E9/FFFFFF?text=AP&font=inter" alt="Ícone do App Assine PDF" class="mx-auto mb-8 h-28 w-28 rounded-2xl shadow-2xl border-2 border-sky-500/50">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+                Assine PDF
+            </h1>
+            <p class="text-xl sm:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto">
+                A maneira mais prática, privada e segura de assinar, carimbar e editar seus PDFs diretamente no seu Android. 100% offline e sem cadastros.
+            </p>
+            <a href="#download" class="cta-button text-lg">
+                Baixe Agora na Google Play
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16 sm:py-20">
+
+        <section id="funcionalidades" class="mb-20">
+            <h2 class="section-title text-center">Funcionalidades Principais</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="card">
+                    <h3 class="subsection-title">Versão FREE <span class="text-base font-medium text-slate-400">(Gratuita)</span></h3>
+                    <ul class="feature-list">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Carregar e visualizar PDFs.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Assinatura eletrônica desenhada.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Salvar até 2 assinaturas.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Criar e salvar 1 carimbo.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Adicionar textos livres.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Salvar e compartilhar (com marca d’água).</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Proteção por PIN.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Interface intuitiva.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Funciona 100% offline.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Privacidade total.</li>
+                    </ul>
+                </div>
+
+                <div class="card border-2 border-amber-500 relative">
+                     <span class="pro-badge absolute -top-4 left-1/2 transform -translate-x-1/2 shadow-lg">MAIS POPULAR</span>
+                    <h3 class="subsection-title flex items-center">
+                        Versão PRO
+                        <span class="pro-badge ml-3 !bg-sky-500 !text-white">Premium</span>
+                    </h3>
+                    <p class="text-sm text-slate-400 mb-6">Assinatura anual com todos os recursos desbloqueados e mais!</p>
+                    <ul class="feature-list">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="!text-amber-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Assinaturas desenhadas ilimitadas.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="!text-amber-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Carimbos personalizados ilimitados.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="!text-amber-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Assinatura em múltiplas páginas.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="!text-amber-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Adição de páginas em branco.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="!text-amber-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Sem marca d’água nos PDFs.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="!text-amber-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Proteção biométrica (digital/facial).</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="!text-amber-400"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>Acesso prioritário a novos recursos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="diferenciais" class="mb-20">
+            <h2 class="section-title text-center">Por que escolher o Assine PDF?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-diferencial mx-auto"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" /></svg>
+                    <h4 class="font-semibold text-xl mb-2 text-sky-300">Privacidade Total</h4>
+                    <p class="text-sm text-slate-400">Sem cadastro, sem nuvem, sem coleta de dados. Seus documentos e informações ficam apenas no seu dispositivo.</p>
+                </div>
+                <div class="card text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-diferencial mx-auto"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v3.75a3 3 0 0 1-3 3m-13.5 0h13.5m-13.5 0a3 3 0 0 0-3 3v.75a3 3 0 0 0 3 3h13.5a3 3 0 0 0 3-3v-.75a3 3 0 0 0-3-3m-3.75-9h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z M12 2.25a.75.75 0 0 0-.75.75v11.25l1.525-1.017.2-.133a.75.75 0 0 0-.95-.448l-2.114.939a.75.75 0 0 0-.364.646V16.5a.75.75 0 0 0 .75.75h10.5a.75.75 0 0 0 .75-.75v-3.75a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 1-.75-.75V3a.75.75 0 0 0-.75-.75Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 9.75-7.5 9.75S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" /></svg> <h4 class="font-semibold text-xl mb-2 text-sky-300">100% Offline</h4>
+                    <p class="text-sm text-slate-400">Todos os recursos essenciais disponíveis a qualquer hora, em qualquer lugar, sem depender de internet.</p>
+                </div>
+                <div class="card text-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-diferencial mx-auto"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.5 13.5h3.75V12h-3.75V13.5Z" /></svg>
+                    <h4 class="font-semibold text-xl mb-2 text-sky-300">Interface Simples</h4>
+                    <p class="text-sm text-slate-400">Intuitivo e rápido, sem menus complexos ou excesso de opções. Ideal para todos os usuários.</p>
+                </div>
+                <div class="card text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-diferencial mx-auto"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.219 12.768 11 12 11c-.768 0-1.536.219-2.121.727l-.879.659ZM12 6a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm12 6a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM3.75 6a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Zm12 6.055A4.501 4.501 0 0 1 18.255 18H5.745a4.501 4.501 0 0 1 2.505-5.945Zm3.75-3.055a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" /></svg>
+                    <h4 class="font-semibold text-xl mb-2 text-sky-300">Freemium Transparente</h4>
+                    <p class="text-sm text-slate-400">Funções básicas gratuitas e completas. PRO com valor justo e sem surpresas.</p>
+                </div>
+                <div class="card text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-diferencial mx-auto"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" /></svg>
+                    <h4 class="font-semibold text-xl mb-2 text-sky-300">Segurança Local</h4>
+                    <p class="text-sm text-slate-400">Proteção por PIN e biometria local, sem envio de dados sensíveis para servidores externos.</p>
+                </div>
+                <div class="card text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-diferencial mx-auto"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 1 1 9 0v3.75M3.75 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75M13.5 10.5V21A-4.5 -4.5 0 0 0 9 16.5V10.5M3.75 10.5V16.5A-4.5 -4.5 0 0 1 9 21V10.5" /><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M13.5 6.75a4.5 4.5 0 1 1-9 0M13.5 6.75v3.75m0-3.75a4.5 4.5 0 1 0 9 0m-9 0v3.75" /></svg> <h4 class="font-semibold text-xl mb-2 text-sky-300">Sem Anúncios</h4>
+                    <p class="text-sm text-slate-400">Experiência limpa, sem banners ou pop-ups. Use quantos documentos precisar, sem interrupções.</p>
+                </div>
+                 <div class="card text-center md:col-span-2 lg:col-span-3">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-diferencial mx-auto"><path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 0 1-.923 1.785A5.969 5.969 0 0 0 6 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337Z" /></svg>
+                    <h4 class="font-semibold text-xl mb-2 text-sky-300">Suporte Brasileiro</h4>
+                    <p class="text-sm text-slate-400">Pensado para o público brasileiro, com interface em português, suporte local e atenção às necessidades do mercado nacional.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tabela-funcoes" class="mb-20">
+            <h2 class="section-title text-center">Compare as Versões</h2>
+            <div class="overflow-x-auto shadow-2xl rounded-lg border border-slate-700">
+                <table class="w-full min-w-max text-sm text-left text-slate-300">
+                    <thead class="text-xs uppercase table-header">
+                        <tr>
+                            <th scope="col" class="px-6 py-4 rounded-tl-lg">Função</th>
+                            <th scope="col" class="px-6 py-4 text-center">Versão FREE</th>
+                            <th scope="col" class="px-6 py-4 text-center rounded-tr-lg">Versão PRO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row-dark border-b border-slate-600">
+                            <td class="px-6 py-4 font-medium text-slate-100">Visualizar PDFs</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                        </tr>
+                        <tr class="table-row-light border-b border-slate-700">
+                            <td class="px-6 py-4 font-medium text-slate-100">Assinar PDFs (desenho livre)</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                        </tr>
+                        <tr class="table-row-dark border-b border-slate-600">
+                            <td class="px-6 py-4 font-medium text-slate-100">Salvar assinaturas</td>
+                            <td class="px-6 py-4 text-center">2</td>
+                            <td class="px-6 py-4 text-center font-semibold text-amber-400">Ilimitado</td>
+                        </tr>
+                        <tr class="table-row-light border-b border-slate-700">
+                            <td class="px-6 py-4 font-medium text-slate-100">Carimbos personalizados</td>
+                            <td class="px-6 py-4 text-center">1</td>
+                            <td class="px-6 py-4 text-center font-semibold text-amber-400">Ilimitado</td>
+                        </tr>
+                        <tr class="table-row-dark border-b border-slate-600">
+                            <td class="px-6 py-4 font-medium text-slate-100">Adicionar textos</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                        </tr>
+                        <tr class="table-row-light border-b border-slate-700">
+                            <td class="px-6 py-4 font-medium text-slate-100">Compartilhar PDFs</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                        </tr>
+                        <tr class="table-row-dark border-b border-slate-600">
+                            <td class="px-6 py-4 font-medium text-slate-100">Marca d’água</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️ <span class="watermark-info">(discreta)</span></td>
+                            <td class="px-6 py-4 text-center crossmark">❌</td>
+                        </tr>
+                        <tr class="table-row-light border-b border-slate-700">
+                            <td class="px-6 py-4 font-medium text-slate-100">Assinar todas as páginas</td>
+                            <td class="px-6 py-4 text-center crossmark">❌</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                        </tr>
+                        <tr class="table-row-dark border-b border-slate-600">
+                            <td class="px-6 py-4 font-medium text-slate-100">Adicionar página em branco</td>
+                            <td class="px-6 py-4 text-center crossmark">❌</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                        </tr>
+                        <tr class="table-row-light border-b border-slate-700">
+                            <td class="px-6 py-4 font-medium text-slate-100">Proteção por PIN</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                        </tr>
+                        <tr class="table-row-dark border-b border-slate-600">
+                            <td class="px-6 py-4 font-medium text-slate-100">Proteção biométrica</td>
+                            <td class="px-6 py-4 text-center crossmark">❌</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                        </tr>
+                         <tr class="table-row-light border-b border-slate-700">
+                            <td class="px-6 py-4 font-medium text-slate-100">Funciona offline</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                        </tr>
+                        <tr class="table-row-dark rounded-b-lg">
+                            <td class="px-6 py-4 font-medium text-slate-100">Suporte em português</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                            <td class="px-6 py-4 text-center checkmark">✔️</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="conclusao" class="mb-20 bg-gradient-to-r from-sky-600 to-cyan-500 text-white p-10 sm:p-16 rounded-xl shadow-2xl">
+            <h2 class="text-4xl font-bold text-center mb-8">Sua Solução Completa para PDFs no Android</h2>
+            <p class="text-lg text-center mb-5 max-w-3xl mx-auto leading-relaxed">
+                O <strong>Assine PDF</strong> se destaca por ser uma solução leve, segura, sem dependência de nuvem, com foco em privacidade e experiência do usuário brasileiro. Ele entrega as funções essenciais de assinatura e edição de PDFs de forma gratuita e transparente, com um upgrade PRO acessível para quem precisa de recursos avançados — tudo isso sem anúncios, sem coleta de dados e com funcionamento 100% offline.
+            </p>
+            <p class="text-lg text-center max-w-3xl mx-auto leading-relaxed">
+                Enquanto concorrentes como Adobe Acrobat, Foxit, DocHub e PDF Expert têm interfaces mais complexas, dependem de nuvem ou exigem cadastro, o Assine PDF aposta na simplicidade, privacidade e praticidade, tornando-se uma excelente escolha para quem quer autonomia e segurança ao lidar com documentos digitais.
+            </p>
+        </section>
+
+        <section id="download" class="text-center py-16">
+            <h2 class="section-title">Pronto para simplificar seus PDFs?</h2>
+            <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+                Baixe o Assine PDF agora mesmo e tenha controle total sobre seus documentos com segurança e privacidade.
+            </p>
+            <a href="#" class="cta-button text-xl inline-flex items-center group">
+                <svg class="w-7 h-7 mr-3 transition-transform duration-300 group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.97998 2.02246C4.97998 2.02246 3.00078 3.30005 3.00078 5.40005V18.6C3.00078 20.7 4.97998 21.9775 4.97998 21.9775L14.16 12L4.97998 2.02246ZM5.52078 4.16484L12.66 12L5.52078 19.8352V4.16484ZM15.24 12L9.72078 15.9176L19.0208 20.4176C19.0208 20.4176 21.0008 19.14 21.0008 17.04V6.96C21.0008 4.86 19.0208 3.58242 19.0208 3.58242L9.72078 8.08242L15.24 12Z"></path></svg>
+                Disponível na Google Play
+            </a>
+            <p class="mt-6 text-sm text-slate-500">Totalmente gratuito para começar!</p>
+        </section>
+
+    </main>
+
+    <footer class="footer-bg text-slate-400 py-10 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; <span id="currentYear"></span> Assine PDF. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Desenvolvido com foco na sua privacidade e produtividade.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        // Script para ícone de offline (exemplo, pode ser melhorado)
+        // Para o ícone de offline, usei um SVG de 'signal-slash' da Heroicons.
+        // Se precisar de um ícone mais específico como um avião, pode substituir o SVG na seção de diferenciais.
+        // O ícone de privacidade é um escudo (shield-check).
+        // O ícone de interface simples é 'cursor-arrow-rays' (varinha mágica).
+        // O ícone de freemium transparente é 'scale' (balança).
+        // O ícone de segurança local é 'lock-closed'.
+        // O ícone de sem anúncios é 'eye-slash'.
+        // O ícone de suporte brasileiro é um balão de fala.
+    </script>
+
+</body>
+</html>
+
